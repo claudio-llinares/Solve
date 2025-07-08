@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data structure &mdash; Solve-MOND-MM e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="files" href="sphinx-c-apidoc/output/files.html" />
+    <link rel="prev" title="Folder structure" href="folder_structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Solve-MOND-MM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="folder_structure.html">Folder structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-c-apidoc/output/files.html">files</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Solve-MOND-MM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/data_structure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-structure">
+<h1>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">¶</a></h1>
+<p>We have the following structures defined in the code:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code>: defined in solve.h.  It contains input parameters and some physical constants (including expansion factor).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parts</span></code>: defined in <code class="docutils literal notranslate"><span class="pre">pm/init_parts.h</span></code>.  It contains particles’ positions and velocities, which are allocated in <code class="docutils literal notranslate"><span class="pre">pm/init_parts.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grids</span></code>: defined in <code class="docutils literal notranslate"><span class="pre">grid/init_grid.h</span></code>.  If contains all the fields and space for doing FFTs.  Eveything is allocated in <code class="docutils literal notranslate"><span class="pre">grid/init_grid.h</span></code>.  Note that there are additional grids allocated by the multigrid solver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grids_gravity_mm</span></code>: defined in <code class="docutils literal notranslate"><span class="pre">gravity/mond_mass/solve_multigrid_mm.h</span></code>.  It contains everything related to the MOND-MM multigrid solver (including the coarse grids, which are allocated in <code class="docutils literal notranslate"><span class="pre">gravity/mond_mass/solve_multigrid_mm.c</span></code>.</p></li>
+</ul>
+<p>Detailed definitions follow:</p>
+<dl class="c type">
+<dt id="c.params">
+<em class="property">type </em><code class="sig-name descname">params</code><a class="headerlink" href="#c.params" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Structure with input parameters and fields</p>
+<dl class="c member">
+<dt id="c.params.H0">
+double <code class="sig-name descname">H0</code><a class="headerlink" href="#c.params.H0" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.a">
+double <code class="sig-name descname">a</code><a class="headerlink" href="#c.params.a" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Expansion factor.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.box">
+double <code class="sig-name descname">box</code><a class="headerlink" href="#c.params.box" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mpc/h and then converted to Mpc in init_physics.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.cte_poisson">
+double <code class="sig-name descname">cte_poisson</code><a class="headerlink" href="#c.params.cte_poisson" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">char [1000] file_in_parts</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">char [1000] file_out</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.gravity">
+int <code class="sig-name descname">gravity</code><a class="headerlink" href="#c.params.gravity" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>0 -&gt; Newton                   1 -&gt; MOND with mass term.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.grid">
+int <code class="sig-name descname">grid</code><a class="headerlink" href="#c.params.grid" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Grid size (the code is not tested with this number being different than the number of particles).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.grid_p">
+int <code class="sig-name descname">grid_p</code><a class="headerlink" href="#c.params.grid_p" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Grid of particles (cubic root of total number of particles).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.hsmall">
+double <code class="sig-name descname">hsmall</code><a class="headerlink" href="#c.params.hsmall" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_KB">
+double <code class="sig-name descname">mm_KB</code><a class="headerlink" href="#c.params.mm_KB" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND constant.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_M">
+double <code class="sig-name descname">mm_M</code><a class="headerlink" href="#c.params.mm_M" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND mass in h/Mpc and converted to 1/Mpc.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_a0">
+double <code class="sig-name descname">mm_a0</code><a class="headerlink" href="#c.params.mm_a0" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND a0 in km/sec^2 and converted to Mpc/Gyr^2.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.n_outputs">
+int <code class="sig-name descname">n_outputs</code><a class="headerlink" href="#c.params.n_outputs" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nparts">
+int <code class="sig-name descname">nparts</code><a class="headerlink" href="#c.params.nparts" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Total number of particles.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nsteps">
+int <code class="sig-name descname">nsteps</code><a class="headerlink" href="#c.params.nsteps" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of time steps.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nthreads">
+int <code class="sig-name descname">nthreads</code><a class="headerlink" href="#c.params.nthreads" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of threads. (interesting only if OPENMP).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.omegal">
+double <code class="sig-name descname">omegal</code><a class="headerlink" href="#c.params.omegal" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.omegam">
+double <code class="sig-name descname">omegam</code><a class="headerlink" href="#c.params.omegam" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.static_test">
+int <code class="sig-name descname">static_test</code><a class="headerlink" href="#c.params.static_test" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double [1000] t_of_a</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose">
+int <code class="sig-name descname">verbose</code><a class="headerlink" href="#c.params.verbose" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose_mm">
+int <code class="sig-name descname">verbose_mm</code><a class="headerlink" href="#c.params.verbose_mm" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose_mm_coarse">
+int <code class="sig-name descname">verbose_mm_coarse</code><a class="headerlink" href="#c.params.verbose_mm_coarse" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.z_end">
+double <code class="sig-name descname">z_end</code><a class="headerlink" href="#c.params.z_end" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.z_init">
+double <code class="sig-name descname">z_init</code><a class="headerlink" href="#c.params.z_init" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.particles">
+<em class="property">type </em><code class="sig-name descname">particles</code><a class="headerlink" href="#c.particles" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="c member">
+<dt id="c.particles.pos_1">
+double *<code class="sig-name descname">pos_1</code><a class="headerlink" href="#c.particles.pos_1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.particles.pos_2">
+double *<code class="sig-name descname">pos_2</code><a class="headerlink" href="#c.particles.pos_2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.particles.pos_3">
+double *<code class="sig-name descname">pos_3</code><a class="headerlink" href="#c.particles.pos_3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.particles.vel_1">
+double *<code class="sig-name descname">vel_1</code><a class="headerlink" href="#c.particles.vel_1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.particles.vel_2">
+double *<code class="sig-name descname">vel_2</code><a class="headerlink" href="#c.particles.vel_2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.particles.vel_3">
+double *<code class="sig-name descname">vel_3</code><a class="headerlink" href="#c.particles.vel_3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.grids">
+<em class="property">type </em><code class="sig-name descname">grids</code><a class="headerlink" href="#c.grids" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="c member">
+<dt id="c.grids.chi_bar_mm">
+double ***<code class="sig-name descname">chi_bar_mm</code><a class="headerlink" href="#c.grids.chi_bar_mm" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.data">
+fftw_complex *<code class="sig-name descname">data</code><a class="headerlink" href="#c.grids.data" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.delta">
+double ***<code class="sig-name descname">delta</code><a class="headerlink" href="#c.grids.delta" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_1">
+double ***<code class="sig-name descname">force_1</code><a class="headerlink" href="#c.grids.force_1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_2">
+double ***<code class="sig-name descname">force_2</code><a class="headerlink" href="#c.grids.force_2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_3">
+double ***<code class="sig-name descname">force_3</code><a class="headerlink" href="#c.grids.force_3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_chi_bar_mm_1">
+double ***<code class="sig-name descname">force_chi_bar_mm_1</code><a class="headerlink" href="#c.grids.force_chi_bar_mm_1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_chi_bar_mm_2">
+double ***<code class="sig-name descname">force_chi_bar_mm_2</code><a class="headerlink" href="#c.grids.force_chi_bar_mm_2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_chi_bar_mm_3">
+double ***<code class="sig-name descname">force_chi_bar_mm_3</code><a class="headerlink" href="#c.grids.force_chi_bar_mm_3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_phi_bar_mm_1">
+double ***<code class="sig-name descname">force_phi_bar_mm_1</code><a class="headerlink" href="#c.grids.force_phi_bar_mm_1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_phi_bar_mm_2">
+double ***<code class="sig-name descname">force_phi_bar_mm_2</code><a class="headerlink" href="#c.grids.force_phi_bar_mm_2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.force_phi_bar_mm_3">
+double ***<code class="sig-name descname">force_phi_bar_mm_3</code><a class="headerlink" href="#c.grids.force_phi_bar_mm_3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.p_backward">
+fftw_plan <code class="sig-name descname">p_backward</code><a class="headerlink" href="#c.grids.p_backward" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.p_forward">
+fftw_plan <code class="sig-name descname">p_forward</code><a class="headerlink" href="#c.grids.p_forward" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.phi">
+double ***<code class="sig-name descname">phi</code><a class="headerlink" href="#c.grids.phi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.phi_bar_mm">
+double ***<code class="sig-name descname">phi_bar_mm</code><a class="headerlink" href="#c.grids.phi_bar_mm" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids.source">
+double ***<code class="sig-name descname">source</code><a class="headerlink" href="#c.grids.source" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.grids_gravity_mm">
+<em class="property">type </em><code class="sig-name descname">grids_gravity_mm</code><a class="headerlink" href="#c.grids_gravity_mm" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Main data structure of the multigrid solver.</p>
+<dl class="simple">
+<dt>Comments:</dt><dd><ul class="simple">
+<li><p>Note that here we have a copy of the main parameters of the code.
+That is to avoid having to accessing too many structures in some of the
+loops in the solver.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="c member">
+<dt id="c.grids_gravity_mm.KB">
+double <code class="sig-name descname">KB</code><a class="headerlink" href="#c.grids_gravity_mm.KB" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND parameter KB</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.a2M2">
+double <code class="sig-name descname">a2M2</code><a class="headerlink" href="#c.grids_gravity_mm.a2M2" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND parameter M^2 (multipled by a^2).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.aa0">
+double <code class="sig-name descname">aa0</code><a class="headerlink" href="#c.grids_gravity_mm.aa0" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>MOND parameter a0</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.chi">
+double ***<code class="sig-name descname">chi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.chi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Solution for the MOND equation (
+).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.cte_poisson_over_a">
+double <code class="sig-name descname">cte_poisson_over_a</code><a class="headerlink" href="#c.grids_gravity_mm.cte_poisson_over_a" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.fourh">
+double <code class="sig-name descname">fourh</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.fourh" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This one is optimization</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.g">
+int <code class="sig-name descname">g</code><a class="headerlink" href="#c.grids_gravity_mm.g" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Grid in which we are working.  0 = finest (so what people call V cycle, is actually a Lambda).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.h">
+double <code class="sig-name descname">h</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.h" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Spacing of each grid.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.n">
+int <code class="sig-name descname">n</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.n" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Size of each grid.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.num_grids">
+int <code class="sig-name descname">num_grids</code><a class="headerlink" href="#c.grids_gravity_mm.num_grids" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of grids according to the finnest.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.par">
+<em class="property">struct</em> <a class="reference internal" href="#c.grids_gravity_mm.params" title="params">params</a> *<code class="sig-name descname">par</code><a class="headerlink" href="#c.grids_gravity_mm.par" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pointer to the parameter structure of the main code (see solve.h for details).</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.grids_gravity_mm.params">
+<em class="property">struct </em><code class="sig-name descname">params</code><a class="headerlink" href="#c.grids_gravity_mm.params" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.phi">
+double ***<code class="sig-name descname">phi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.phi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Solution for the Newtonia potential
+.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.res_chi">
+double ***<code class="sig-name descname">res_chi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.res_chi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Residual of the equation for chi.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.res_phi">
+double ***<code class="sig-name descname">res_phi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.res_phi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Residual of the equation for phi.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.rho">
+double ***<code class="sig-name descname">rho</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.rho" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Density (or overdensity) (see how it is used in gs routine)).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] source_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.source_phi">
+double ***<code class="sig-name descname">source_phi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.source_phi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Source of the equation for coarse grids in the FAS algorithm</p>
+</dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp2_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp2_phi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp_phi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.trunc_chi">
+double ***<code class="sig-name descname">trunc_chi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.trunc_chi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>truncation error in all cells all grids.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.trunc_phi">
+double ***<code class="sig-name descname">trunc_phi</code>[20]<a class="headerlink" href="#c.grids_gravity_mm.trunc_phi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>truncation error in all cells all grids.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.verbose">
+int <code class="sig-name descname">verbose</code><a class="headerlink" href="#c.grids_gravity_mm.verbose" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.verbose_coarse">
+int <code class="sig-name descname">verbose_coarse</code><a class="headerlink" href="#c.grids_gravity_mm.verbose_coarse" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sphinx-c-apidoc/output/files.html" class="btn btn-neutral float-right" title="files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="folder_structure.html" class="btn btn-neutral float-left" title="Folder structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

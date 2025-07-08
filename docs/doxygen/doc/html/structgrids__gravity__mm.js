@@ -1,0 +1,28 @@
+var structgrids__gravity__mm =
+[
+    [ "par", "structgrids__gravity__mm.html#a319e628e4b147460e074211f7011bb29", null ],
+    [ "verbose", "structgrids__gravity__mm.html#adf22918f599052e7e04aa44a9b9d48be", null ],
+    [ "verbose_coarse", "structgrids__gravity__mm.html#ac39aee2d04794a68ae6c6026e119d43b", null ],
+    [ "cte_poisson_over_a", "structgrids__gravity__mm.html#aa12ad1ab1aadcccae09ed26ee27b6008", null ],
+    [ "aa0", "structgrids__gravity__mm.html#a40b4c4a5f97e763e2582d3fb147645bc", null ],
+    [ "a2M2", "structgrids__gravity__mm.html#aca15e2db728356795f58f1a3b7b2334a", null ],
+    [ "KB", "structgrids__gravity__mm.html#a19247968c1a2e02c5036a8750bd3c554", null ],
+    [ "num_grids", "structgrids__gravity__mm.html#a802272d3d36848919f6d02ee7a82fe24", null ],
+    [ "g", "structgrids__gravity__mm.html#a2536c1038a89e3d7ab715466962961e5", null ],
+    [ "n", "structgrids__gravity__mm.html#af44d3b2708f73925f16670b1adac3e13", null ],
+    [ "h", "structgrids__gravity__mm.html#aa853a87a0963c2200ef1d27c5071e8fe", null ],
+    [ "fourh", "structgrids__gravity__mm.html#a8e82f70dbb02e3548365f0d0cd3536f9", null ],
+    [ "rho", "structgrids__gravity__mm.html#a6948656f48bc16f7d08bfbb532e85059", null ],
+    [ "phi", "structgrids__gravity__mm.html#a5a6a07e8f938fdf7da4fee0f3be91edb", null ],
+    [ "chi", "structgrids__gravity__mm.html#a2c77ad2609c0989f036d582bc59d6175", null ],
+    [ "res_phi", "structgrids__gravity__mm.html#a121089e177a49c6bc50feb90214d35a2", null ],
+    [ "res_chi", "structgrids__gravity__mm.html#a9b2a5a057f32933bd47716874ed32588", null ],
+    [ "source_phi", "structgrids__gravity__mm.html#a2ffcfab9270a75b296bb3a09efad8d6d", null ],
+    [ "source_chi", "structgrids__gravity__mm.html#a10dea9bf4fcf6faa13547b9ed4e4f673", null ],
+    [ "temp_phi", "structgrids__gravity__mm.html#aa70a261ab4d83a47e78708dbe299c490", null ],
+    [ "temp_chi", "structgrids__gravity__mm.html#a850abb6599ce79c2a4ea7f8081b44eb4", null ],
+    [ "temp2_phi", "structgrids__gravity__mm.html#aaff3660c51f52c0cc6c65f745fb485ab", null ],
+    [ "temp2_chi", "structgrids__gravity__mm.html#a5e58d5915be9768c7128524b05a8ebd9", null ],
+    [ "trunc_phi", "structgrids__gravity__mm.html#a6bca8f95c4b972e5e91a5bf315e09c19", null ],
+    [ "trunc_chi", "structgrids__gravity__mm.html#a6dd53b839cfa620eccf2e1711a627b73", null ]
+];

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['sec2gyr_0',['sec2gyr',['../structunits.html#a0ace3c2b4a832ba74682ff56dd12d830',1,'units']]],
+  ['solve_2ec_1',['solve.c',['../solve_8c.html',1,'']]],
+  ['solve_2eh_2',['solve.h',['../solve_8h.html',1,'']]],
+  ['solve_5fmultigrid_5fmm_3',['solve_multigrid_mm',['../solve__multigrid__mm_8h.html#ac1290f512e06b92e072bcdfa62d18492',1,'solve_multigrid_mm(struct params *par, double ***dens, double ***chi, double ***phi, double box, double grid, double a):&#160;solve_multigrid_mm.c'],['../solve__multigrid__mm_8c.html#a35c2a85a5ba40b28f1c7787f7f5259a9',1,'solve_multigrid_mm(struct params *par, double ***dens, double ***phi, double ***chi, double box, double grid, double a):&#160;solve_multigrid_mm.c']]],
+  ['solve_5fmultigrid_5fmm_2ec_4',['solve_multigrid_mm.c',['../solve__multigrid__mm_8c.html',1,'']]],
+  ['solve_5fmultigrid_5fmm_2eh_5',['solve_multigrid_mm.h',['../solve__multigrid__mm_8h.html',1,'']]],
+  ['solve_5fpoisson_5ffftw_6',['solve_poisson_fftw',['../solve__poisson__fftw_8h.html#a304027aa2ed922e4cee0bd8556281a3c',1,'solve_poisson_fftw(struct params *par, struct grids *grid, struct units *unit):&#160;solve_poisson_fftw.c'],['../solve__poisson__fftw_8c.html#a304027aa2ed922e4cee0bd8556281a3c',1,'solve_poisson_fftw(struct params *par, struct grids *grid, struct units *unit):&#160;solve_poisson_fftw.c']]],
+  ['solve_5fpoisson_5ffftw_2ec_7',['solve_poisson_fftw.c',['../solve__poisson__fftw_8c.html',1,'']]],
+  ['solve_5fpoisson_5ffftw_2eh_8',['solve_poisson_fftw.h',['../solve__poisson__fftw_8h.html',1,'']]],
+  ['solve_5fspherical_5fmond_9',['solve_spherical_mond',['../solve__spherical__mond_8h.html#ae7acbb23127cd9659498b6f336bd1acd',1,'solve_spherical_mond(double ***phi, double a, fftw_complex *data, fftw_plan p_forward, fftw_plan p_backward, int power_a0):&#160;solve_spherical_mond.h'],['../solve__spherical__mond_8c.html#a3a3a923624932ea6e9675649cedf01a6',1,'solve_spherical_mond(double ***phi, double a, fftw_complex *data, fftw_plan p_forward, fftw_plan p_backward, double power_a0):&#160;solve_spherical_mond.c']]],
+  ['solve_5fspherical_5fmond_2ec_10',['solve_spherical_mond.c',['../solve__spherical__mond_8c.html',1,'']]],
+  ['solve_5fspherical_5fmond_2eh_11',['solve_spherical_mond.h',['../solve__spherical__mond_8h.html',1,'']]],
+  ['sort_5f3_5fvalues_12',['sort_3_values',['../utils_8c.html#a5de91da0731d69502247a8b2140a2449',1,'sort_3_values(double *a):&#160;utils.c'],['../utils_8h.html#a5de91da0731d69502247a8b2140a2449',1,'sort_3_values(double *a):&#160;utils.c']]],
+  ['source_13',['source',['../structgrids.html#a153764bc4ef5d01b299e97d2962e8a3e',1,'grids']]],
+  ['source_5fchi_14',['source_chi',['../structgrids__gravity__mm.html#a10dea9bf4fcf6faa13547b9ed4e4f673',1,'grids_gravity_mm']]],
+  ['source_5fphi_15',['source_phi',['../structgrids__gravity__mm.html#a2ffcfab9270a75b296bb3a09efad8d6d',1,'grids_gravity_mm']]],
+  ['static_5ftest_16',['static_test',['../static__test_8c.html#a66deec85e812da504876f1674596ac71',1,'static_test(struct params *par, struct grids *grid, struct particles *part, struct units *unit):&#160;static_test.c'],['../static__test_8h.html#a66deec85e812da504876f1674596ac71',1,'static_test(struct params *par, struct grids *grid, struct particles *part, struct units *unit):&#160;static_test.c'],['../structparams.html#a594447f557d180c3bd4a84beccd9eed0',1,'params::static_test()']]],
+  ['static_5ftest_2ec_17',['static_test.c',['../static__test_8c.html',1,'']]],
+  ['static_5ftest_2eh_18',['static_test.h',['../static__test_8h.html',1,'']]],
+  ['sx_5ffirst_5fmm_19',['sx_first_mm',['../gs__residual__truncation__error__mm_8c.html#a2c39b19dd12155be9f95af0c46433328',1,'gs_residual_truncation_error_mm.c']]],
+  ['sy_5ffirst_5fmm_20',['sy_first_mm',['../gs__residual__truncation__error__mm_8c.html#ac86ffb764a9cf41f8b858acd67cacab0',1,'gs_residual_truncation_error_mm.c']]],
+  ['sz_5ffirst_5fmm_21',['sz_first_mm',['../gs__residual__truncation__error__mm_8c.html#a457aabd6c4ec5f8153e697da67c9a5ca',1,'gs_residual_truncation_error_mm.c']]]
+];

@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Folder structure &mdash; Solve-MOND-MM e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data structure" href="data_structure.html" />
+    <link rel="prev" title="Solve-MOND-MM documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Solve-MOND-MM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-c-apidoc/output/files.html">files</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Solve-MOND-MM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Folder structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/folder_structure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="folder-structure">
+<h1>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h1>
+<p>Here is the folder structure of the code:</p>
+<div class="line-block">
+<div class="line">.</div>
+<div class="line">├── bin</div>
+<div class="line">├── gravity</div>
+<div class="line">│   ├── commons_multigrid</div>
+<div class="line">│   ├── mond_mass</div>
+<div class="line">│   └── newton</div>
+<div class="line">│             └── fft_solver</div>
+<div class="line">├── grid</div>
+<div class="line">├── libs</div>
+<div class="line">├── pm</div>
+<div class="line">├── tests</div>
+<div class="line">└── time_evolution</div>
+</div>
+<p>Details:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bin</span></code> contains the Makefile</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gravity</span></code> contains the gravity solvers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gravity/commons_multigrid</span></code> suport routines for multigrid solvers which do not depend on the model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gravity/mond_mass</span></code> constains the multigrid solver for the model we are dealing with (MOND with mass terms).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gravity/newton</span></code> contains an FFT based solver for Poisson’s equation (needed for standard simulations).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grid</span></code> all routines related to the grid including allocation routines and initialization of the FFTW variables.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libs</span></code> miscelaneous including cosmology, utility files for allocating 3D arrays and routines for reading parameter files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pm</span></code> (particle mesh).  Everything related to the particles at their connection to the grid.  Here we allocate memory for particles and transfer information from the particles trough the grid (for calculatign density in the grid) and viceversa (for calculating force in the particles).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests</span></code> has routines for testing.  Here you can find the routines for the spherical test.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_evolution</span></code> contains the main time loop.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_structure.html" class="btn btn-neutral float-right" title="Data structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Solve-MOND-MM documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

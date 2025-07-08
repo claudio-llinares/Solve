@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>solve_multigrid_mm.h &mdash; Solve-MOND-MM e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="solve_spherical_mond.c" href="solve_spherical_mond_c.html" />
+    <link rel="prev" title="solve_multigrid_mm.c" href="solve_multigrid_mm_c.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home" alt="Documentation Home"> Solve-MOND-MM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../folder_structure.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_structure.html">Data structure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../files.html">files</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../gravity.html">gravity</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mond_mass.html">mond_mass</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cycles_mm_c.html">cycles_mm.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="differential_operators_mm_c.html">differential_operators_mm.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="go_up_and_down_mm_c.html">go_up_and_down_mm.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gs_residual_truncation_error_mm_c.html">gs_residual_truncation_error_mm.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="initial_guess_mm_c.html">initial_guess_mm.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solve_multigrid_mm_c.html">solve_multigrid_mm.c</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">solve_multigrid_mm.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solve_spherical_mond_c.html">solve_spherical_mond.c</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../newton/newton.html">newton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../prolonge_c.html">prolonge.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../restrict_c.html">restrict.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../get_forces_c.html">get_forces.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../get_gravity_c.html">get_gravity.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../get_lap_c.html">get_lap.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../grid/grid.html">grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libs/libs.html">libs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pm/pm.html">pm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests/tests.html">tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time_evolution/time_evolution.html">time_evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../init_physics_c.html">init_physics.c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../init_physics_h.html">init_physics.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solve_c.html">solve.c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solve_h.html">solve.h</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Solve-MOND-MM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../files.html">files</a> &raquo;</li>
+        
+          <li><a href="../gravity.html">gravity</a> &raquo;</li>
+        
+          <li><a href="mond_mass.html">mond_mass</a> &raquo;</li>
+        
+      <li>solve_multigrid_mm.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/sphinx-c-apidoc/output/gravity/mond_mass/solve_multigrid_mm_h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="solve-multigrid-mm-h">
+<h1>solve_multigrid_mm.h<a class="headerlink" href="#solve-multigrid-mm-h" title="Permalink to this headline">¶</a></h1>
+<dl class="c macro">
+<dt id="c.GO_UP_FIRST">
+<code class="sig-name descname">GO_UP_FIRST</code><a class="headerlink" href="#c.GO_UP_FIRST" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default=1.   If 0 then solver does not go up in the first multigrid level (i.e. one grid scheme).</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.GO_UP_SECOND">
+<code class="sig-name descname">GO_UP_SECOND</code><a class="headerlink" href="#c.GO_UP_SECOND" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.MAX_GRIDS">
+<code class="sig-name descname">MAX_GRIDS</code><a class="headerlink" href="#c.MAX_GRIDS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of pointers to grids (not necessarily allocated). (i.e. not important unless you want to have more than 20 levels).</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.MAX_ITERATION">
+<code class="sig-name descname">MAX_ITERATION</code><a class="headerlink" href="#c.MAX_ITERATION" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Maximun number of complete V cycles before accepting that the solver will not converge.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.MINUS">
+<code class="sig-name descname">MINUS</code><a class="headerlink" href="#c.MINUS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For evaluating the MOND operator.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.NGS">
+<code class="sig-name descname">NGS</code><a class="headerlink" href="#c.NGS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of Gauss-Seidel iterations per level.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.PLUS">
+<code class="sig-name descname">PLUS</code><a class="headerlink" href="#c.PLUS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For evaluating the MOND operator.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.X">
+<code class="sig-name descname">X</code><a class="headerlink" href="#c.X" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For evaluating the MOND operator.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.Y">
+<code class="sig-name descname">Y</code><a class="headerlink" href="#c.Y" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For evaluating the MOND operator.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.Z">
+<code class="sig-name descname">Z</code><a class="headerlink" href="#c.Z" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For evaluating the MOND operator.</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.grids_gravity_mm">
+<em class="property">struct </em><code class="sig-name descname">grids_gravity_mm</code><br /></dt>
+<dd><p>Main data structure of the multigrid solver.</p>
+<dl class="simple">
+<dt>Comments:</dt><dd><ul class="simple">
+<li><p>Note that here we have a copy of the main parameters of the code.
+That is to avoid having to accessing too many structures in some of the
+loops in the solver.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="c member">
+<dt id="c.grids_gravity_mm.KB">
+double <code class="sig-name descname">KB</code><br /></dt>
+<dd><p>MOND parameter KB</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.a2M2">
+double <code class="sig-name descname">a2M2</code><br /></dt>
+<dd><p>MOND parameter M^2 (multipled by a^2).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.aa0">
+double <code class="sig-name descname">aa0</code><br /></dt>
+<dd><p>MOND parameter a0</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.chi">
+double ***<code class="sig-name descname">chi</code>[20]<br /></dt>
+<dd><p>Solution for the MOND equation (
+).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.cte_poisson_over_a">
+double <code class="sig-name descname">cte_poisson_over_a</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.fourh">
+double <code class="sig-name descname">fourh</code>[20]<br /></dt>
+<dd><p>This one is optimization</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.g">
+int <code class="sig-name descname">g</code><br /></dt>
+<dd><p>Grid in which we are working.  0 = finest (so what people call V cycle, is actually a Lambda).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.h">
+double <code class="sig-name descname">h</code>[20]<br /></dt>
+<dd><p>Spacing of each grid.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.n">
+int <code class="sig-name descname">n</code>[20]<br /></dt>
+<dd><p>Size of each grid.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.num_grids">
+int <code class="sig-name descname">num_grids</code><br /></dt>
+<dd><p>Number of grids according to the finnest.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.par">
+<em class="property">struct</em> <a class="reference internal" href="../../../../data_structure.html#c.grids_gravity_mm.params" title="params">params</a> *<code class="sig-name descname">par</code><br /></dt>
+<dd><p>Pointer to the parameter structure of the main code (see solve.h for details).</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.grids_gravity_mm.params">
+<em class="property">struct </em><code class="sig-name descname">params</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.phi">
+double ***<code class="sig-name descname">phi</code>[20]<br /></dt>
+<dd><p>Solution for the Newtonia potential
+.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.res_chi">
+double ***<code class="sig-name descname">res_chi</code>[20]<br /></dt>
+<dd><p>Residual of the equation for chi.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.res_phi">
+double ***<code class="sig-name descname">res_phi</code>[20]<br /></dt>
+<dd><p>Residual of the equation for phi.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.rho">
+double ***<code class="sig-name descname">rho</code>[20]<br /></dt>
+<dd><p>Density (or overdensity) (see how it is used in gs routine)).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] source_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.source_phi">
+double ***<code class="sig-name descname">source_phi</code>[20]<br /></dt>
+<dd><p>Source of the equation for coarse grids in the FAS algorithm</p>
+</dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp2_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp2_phi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp_chi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double ***[20] temp_phi</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.trunc_chi">
+double ***<code class="sig-name descname">trunc_chi</code>[20]<br /></dt>
+<dd><p>truncation error in all cells all grids.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.trunc_phi">
+double ***<code class="sig-name descname">trunc_phi</code>[20]<br /></dt>
+<dd><p>truncation error in all cells all grids.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.verbose">
+int <code class="sig-name descname">verbose</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.grids_gravity_mm.verbose_coarse">
+int <code class="sig-name descname">verbose_coarse</code><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.solve_multigrid_mm">
+<em class="property">extern</em> int <code class="sig-name descname">solve_multigrid_mm</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="../../../../data_structure.html#c.params" title="params">params</a> *<em>par</em>, double ***<em>dens</em>, double ***<em>chi</em>, double ***<em>phi</em>, double <em>box</em>, double <em>grid</em>, double <em>a</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solve_spherical_mond_c.html" class="btn btn-neutral float-right" title="solve_spherical_mond.c" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solve_multigrid_mm_c.html" class="btn btn-neutral float-left" title="solve_multigrid_mm.c" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

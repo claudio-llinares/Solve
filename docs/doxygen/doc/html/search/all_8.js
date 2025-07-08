@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['index_0',['index',['../solve__poisson__fftw_8c.html#ac3aae0bd9c77a2556ed0e8a7754414b9',1,'solve_poisson_fftw.c']]],
+  ['index_5f1d_5fto_5f3d_1',['index_1d_to_3d',['../utils_8h.html#ad8fa13d1f0e8a67289cc2c0b840c2774',1,'index_1d_to_3d(double q, int *i, int *j, int *k, int n):&#160;utils.c'],['../utils_8c.html#ad8fa13d1f0e8a67289cc2c0b840c2774',1,'index_1d_to_3d(double q, int *i, int *j, int *k, int n):&#160;utils.c']]],
+  ['init_5ffftw_2',['init_fftw',['../init__fftw_8c.html#a7edf10a8d5ba971a56420b4b5ca3e834',1,'init_fftw(struct params *par, struct grids *grid):&#160;init_fftw.c'],['../init__fftw_8h.html#a7edf10a8d5ba971a56420b4b5ca3e834',1,'init_fftw(struct params *par, struct grids *grid):&#160;init_fftw.c']]],
+  ['init_5ffftw_2ec_3',['init_fftw.c',['../init__fftw_8c.html',1,'']]],
+  ['init_5ffftw_2eh_4',['init_fftw.h',['../init__fftw_8h.html',1,'']]],
+  ['init_5fgrid_5',['init_grid',['../init__grid_8h.html#ab912074d343e3dc1ebe0570cdc37d62b',1,'init_grid(struct params *par, struct grids *grid):&#160;init_grid.c'],['../init__grid_8c.html#ab912074d343e3dc1ebe0570cdc37d62b',1,'init_grid(struct params *par, struct grids *grid):&#160;init_grid.c']]],
+  ['init_5fgrid_2ec_6',['init_grid.c',['../init__grid_8c.html',1,'']]],
+  ['init_5fgrid_2eh_7',['init_grid.h',['../init__grid_8h.html',1,'']]],
+  ['init_5fkeywords_8',['init_keywords',['../read__params_8c.html#ab85c777c2443d0513e98f0090ba89c62',1,'read_params.c']]],
+  ['init_5fparts_9',['init_parts',['../init__parts_8h.html#a620f1c84b61b5810d8d26a731198baed',1,'init_parts(struct params *par, struct particles *part, struct units *unit):&#160;init_parts.c'],['../init__parts_8c.html#a620f1c84b61b5810d8d26a731198baed',1,'init_parts(struct params *par, struct particles *part, struct units *unit):&#160;init_parts.c']]],
+  ['init_5fparts_2ec_10',['init_parts.c',['../init__parts_8c.html',1,'']]],
+  ['init_5fparts_2eh_11',['init_parts.h',['../init__parts_8h.html',1,'']]],
+  ['init_5fphysics_12',['init_physics',['../init__physics_8h.html#adbf74c502a66dde8e93348d2366e39d8',1,'init_physics(struct params *par, struct units *unit):&#160;init_physics.c'],['../init__physics_8c.html#adbf74c502a66dde8e93348d2366e39d8',1,'init_physics(struct params *par, struct units *unit):&#160;init_physics.c']]],
+  ['init_5fphysics_2ec_13',['init_physics.c',['../init__physics_8c.html',1,'']]],
+  ['init_5fphysics_2eh_14',['init_physics.h',['../init__physics_8h.html',1,'']]],
+  ['initial_5fguess_5fmm_15',['initial_guess_mm',['../initial__guess__mm_8c.html#a824c3070b9cbf430d008a9b9d69106ee',1,'initial_guess_mm(struct params *par, double ***chi_bar, double ***phi_bar):&#160;initial_guess_mm.c'],['../initial__guess__mm_8h.html#a824c3070b9cbf430d008a9b9d69106ee',1,'initial_guess_mm(struct params *par, double ***chi_bar, double ***phi_bar):&#160;initial_guess_mm.c']]],
+  ['initial_5fguess_5fmm_2ec_16',['initial_guess_mm.c',['../initial__guess__mm_8c.html',1,'']]],
+  ['initial_5fguess_5fmm_2eh_17',['initial_guess_mm.h',['../initial__guess__mm_8h.html',1,'']]],
+  ['input_5fparticles_2ec_18',['input_particles.c',['../input__particles_8c.html',1,'']]],
+  ['input_5fparticles_2eh_19',['input_particles.h',['../input__particles_8h.html',1,'']]],
+  ['integrand_5ftime_20',['integrand_time',['../cosmology_8c.html#a71cde157d0c3f250a37a73bed59b7334',1,'integrand_time(double a, void *parameters):&#160;cosmology.c'],['../cosmology_8h.html#a7d750378789fed76ec4b47ebaacd0258',1,'integrand_time(double a, void *params):&#160;cosmology.c']]],
+  ['integrate_5ftime_5fof_5fa_21',['integrate_time_of_a',['../cosmology_8c.html#aaa72b81ee08d0a13dde25fe1ab7a4df5',1,'integrate_time_of_a(struct params *par, double a):&#160;cosmology.c'],['../cosmology_8h.html#aaa72b81ee08d0a13dde25fe1ab7a4df5',1,'integrate_time_of_a(struct params *par, double a):&#160;cosmology.c']]],
+  ['interp_5fforce_5fcic_22',['interp_force_cic',['../interp__force__cic_8c.html#a5f4bc2b1702e97acd595002608288d7b',1,'interp_force_cic(struct params *par, struct grids *grid, struct particles *part, double ***force_1, double ***force_2, double ***force_3, double move_part):&#160;interp_force_cic.c'],['../interp__force__cic_8h.html#a5f4bc2b1702e97acd595002608288d7b',1,'interp_force_cic(struct params *par, struct grids *grid, struct particles *part, double ***force_1, double ***force_2, double ***force_3, double move_part):&#160;interp_force_cic.c']]],
+  ['interp_5fforce_5fcic_2ec_23',['interp_force_cic.c',['../interp__force__cic_8c.html',1,'']]],
+  ['interp_5fforce_5fcic_2eh_24',['interp_force_cic.h',['../interp__force__cic_8h.html',1,'']]]
+];

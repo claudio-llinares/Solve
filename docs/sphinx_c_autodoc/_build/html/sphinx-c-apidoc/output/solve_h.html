@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>solve.h &mdash; Solve-MOND-MM e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="solve.c" href="solve_c.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Solve-MOND-MM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../folder_structure.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_structure.html">Data structure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="files.html">files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gravity/gravity.html">gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/grid.html">grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libs/libs.html">libs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm/pm.html">pm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/tests.html">tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_evolution/time_evolution.html">time_evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_physics_c.html">init_physics.c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_physics_h.html">init_physics.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solve_c.html">solve.c</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">solve.h</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Solve-MOND-MM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="files.html">files</a> &raquo;</li>
+        
+      <li>solve.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sphinx-c-apidoc/output/solve_h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="solve-h">
+<h1>solve.h<a class="headerlink" href="#solve-h" title="Permalink to this headline">¶</a></h1>
+<dl class="c struct">
+<dt id="c.params">
+<em class="property">struct </em><code class="sig-name descname">params</code><br /></dt>
+<dd><p>Structure with input parameters and fields</p>
+<dl class="c member">
+<dt id="c.params.H0">
+double <code class="sig-name descname">H0</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.a">
+double <code class="sig-name descname">a</code><br /></dt>
+<dd><p>Expansion factor.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.box">
+double <code class="sig-name descname">box</code><br /></dt>
+<dd><p>Mpc/h and then converted to Mpc in init_physics.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.cte_poisson">
+double <code class="sig-name descname">cte_poisson</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">char [1000] file_in_parts</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">char [1000] file_out</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.gravity">
+int <code class="sig-name descname">gravity</code><br /></dt>
+<dd><p>0 -&gt; Newton                   1 -&gt; MOND with mass term.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.grid">
+int <code class="sig-name descname">grid</code><br /></dt>
+<dd><p>Grid size (the code is not tested with this number being different than the number of particles).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.grid_p">
+int <code class="sig-name descname">grid_p</code><br /></dt>
+<dd><p>Grid of particles (cubic root of total number of particles).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.hsmall">
+double <code class="sig-name descname">hsmall</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_KB">
+double <code class="sig-name descname">mm_KB</code><br /></dt>
+<dd><p>MOND constant.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_M">
+double <code class="sig-name descname">mm_M</code><br /></dt>
+<dd><p>MOND mass in h/Mpc and converted to 1/Mpc.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.mm_a0">
+double <code class="sig-name descname">mm_a0</code><br /></dt>
+<dd><p>MOND a0 in km/sec^2 and converted to Mpc/Gyr^2.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.n_outputs">
+int <code class="sig-name descname">n_outputs</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nparts">
+int <code class="sig-name descname">nparts</code><br /></dt>
+<dd><p>Total number of particles.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nsteps">
+int <code class="sig-name descname">nsteps</code><br /></dt>
+<dd><p>Number of time steps.</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.nthreads">
+int <code class="sig-name descname">nthreads</code><br /></dt>
+<dd><p>Number of threads. (interesting only if OPENMP).</p>
+</dd></dl>
+
+<dl class="c member">
+<dt id="c.params.omegal">
+double <code class="sig-name descname">omegal</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.omegam">
+double <code class="sig-name descname">omegam</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.static_test">
+int <code class="sig-name descname">static_test</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt>
+<code class="sig-name descname">double [1000] t_of_a</code></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose">
+int <code class="sig-name descname">verbose</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose_mm">
+int <code class="sig-name descname">verbose_mm</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.verbose_mm_coarse">
+int <code class="sig-name descname">verbose_mm_coarse</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.z_end">
+double <code class="sig-name descname">z_end</code><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.params.z_init">
+double <code class="sig-name descname">z_init</code><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow2">
+<code class="sig-name descname">pow2</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow3">
+<code class="sig-name descname">pow3</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow4">
+<code class="sig-name descname">pow4</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow5">
+<code class="sig-name descname">pow5</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow6">
+<code class="sig-name descname">pow6</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.pow7">
+<code class="sig-name descname">pow7</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#c.pow7" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c struct">
+<dt id="c.units">
+<em class="property">struct </em><code class="sig-name descname">units</code><a class="headerlink" href="#c.units" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="c member">
+<dt id="c.units.H0">
+double <code class="sig-name descname">H0</code><a class="headerlink" href="#c.units.H0" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.clight">
+double <code class="sig-name descname">clight</code><a class="headerlink" href="#c.units.clight" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.cm2mpc">
+double <code class="sig-name descname">cm2mpc</code><a class="headerlink" href="#c.units.cm2mpc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.cte_poisson">
+double <code class="sig-name descname">cte_poisson</code><a class="headerlink" href="#c.units.cte_poisson" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.gyr2sec">
+double <code class="sig-name descname">gyr2sec</code><a class="headerlink" href="#c.units.gyr2sec" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.kg2msun">
+double <code class="sig-name descname">kg2msun</code><a class="headerlink" href="#c.units.kg2msun" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.km2mpc">
+double <code class="sig-name descname">km2mpc</code><a class="headerlink" href="#c.units.km2mpc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.m2mpc">
+double <code class="sig-name descname">m2mpc</code><a class="headerlink" href="#c.units.m2mpc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.mpc2km">
+double <code class="sig-name descname">mpc2km</code><a class="headerlink" href="#c.units.mpc2km" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.mpc2km_over_gyr2sec">
+double <code class="sig-name descname">mpc2km_over_gyr2sec</code><a class="headerlink" href="#c.units.mpc2km_over_gyr2sec" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.mpc2m">
+double <code class="sig-name descname">mpc2m</code><a class="headerlink" href="#c.units.mpc2m" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.pi">
+double <code class="sig-name descname">pi</code><a class="headerlink" href="#c.units.pi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.sec2gyr">
+double <code class="sig-name descname">sec2gyr</code><a class="headerlink" href="#c.units.sec2gyr" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c member">
+<dt id="c.units.twopi">
+double <code class="sig-name descname">twopi</code><a class="headerlink" href="#c.units.twopi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="solve_c.html" class="btn btn-neutral float-left" title="solve.c" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

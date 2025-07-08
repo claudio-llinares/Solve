@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['calc_5fdelta_5fcic_0',['calc_delta_cic',['../calc__delta__cic_8c.html#acd97e9dbb5cb92a8cd2d0ddc0ad92ae2',1,'calc_delta_cic(struct params *par, struct units *unit, double *pos_1, double *pos_2, double *pos_3, double ***delta):&#160;calc_delta_cic.c'],['../calc__delta__cic_8h.html#acd97e9dbb5cb92a8cd2d0ddc0ad92ae2',1,'calc_delta_cic(struct params *par, struct units *unit, double *pos_1, double *pos_2, double *pos_3, double ***delta):&#160;calc_delta_cic.c']]],
+  ['calc_5flap_1',['calc_lap',['../get__lap_8c.html#a0e9ecb0c8254b70e3c4e2b2a40cf5bbf',1,'calc_lap(struct params *par, double ***phi, double ***lap_phi):&#160;get_lap.c'],['../get__lap_8h.html#a0e9ecb0c8254b70e3c4e2b2a40cf5bbf',1,'calc_lap(struct params *par, double ***phi, double ***lap_phi):&#160;get_lap.c']]],
+  ['calc_5fnewt_5fsource_2',['calc_newt_source',['../calc__newt__source_8c.html#a9941869ee9aac97ace05a2e88c89905a',1,'calc_newt_source(struct params *par, struct grids *grid, struct units *unit, double a):&#160;calc_newt_source.c'],['../calc__newt__source_8h.html#a9941869ee9aac97ace05a2e88c89905a',1,'calc_newt_source(struct params *par, struct grids *grid, struct units *unit, double a):&#160;calc_newt_source.c']]],
+  ['change_5fsystem_3',['change_system',['../utils_8c.html#a0dde0bb0efbfbef2be9d6289c6de2b21',1,'change_system(double vec[3][3], double *x, double *y, double *z):&#160;utils.c'],['../utils_8h.html#a0dde0bb0efbfbef2be9d6289c6de2b21',1,'change_system(double vec[3][3], double *x, double *y, double *z):&#160;utils.c']]],
+  ['check_5fkeyword_4',['check_keyword',['../read__params_8c.html#ab19b0574bbb76188e16e02cf1c103fa6',1,'read_params.c']]],
+  ['clean_5fup_5fgrid_5',['clean_up_grid',['../clean__up__grid_8c.html#a9c369c5f1401eb4931da2d84f0fdbef8',1,'clean_up_grid(struct params *par, struct grids *grid):&#160;clean_up_grid.c'],['../clean__up__grid_8h.html#a9c369c5f1401eb4931da2d84f0fdbef8',1,'clean_up_grid(struct params *par, struct grids *grid):&#160;clean_up_grid.c']]],
+  ['copy_5fforce_5fphi_6',['copy_force_phi',['../utils_8h.html#a97880570aee02c705ac0d6455c347eda',1,'utils.h']]],
+  ['copy_5fq_7',['copy_q',['../utils_8h.html#aa30330557fe5ab7a96cd356e6a83ea5e',1,'utils.h']]],
+  ['cycle_5fv_5fmm_8',['cycle_v_mm',['../cycles__mm_8c.html#a8ceb0f381f14070ba87276c213d87847',1,'cycle_v_mm(struct grids_gravity_mm *gg, double a):&#160;cycles_mm.c'],['../cycles__mm_8h.html#a8ceb0f381f14070ba87276c213d87847',1,'cycle_v_mm(struct grids_gravity_mm *gg, double a):&#160;cycles_mm.c']]],
+  ['cycle_5fv_5fmm_5frecursive_9',['cycle_v_mm_recursive',['../cycles__mm_8c.html#a91d5d642cd734fb99c180894e1d6be0e',1,'cycles_mm.c']]]
+];

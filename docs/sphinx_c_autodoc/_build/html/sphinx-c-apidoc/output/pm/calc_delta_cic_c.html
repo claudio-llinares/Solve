@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>calc_delta_cic.c &mdash; Solve-MOND-MM e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="init_parts.c" href="init_parts_c.html" />
+    <link rel="prev" title="pm" href="pm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Solve-MOND-MM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../folder_structure.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_structure.html">Data structure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../files.html">files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../gravity/gravity.html">gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grid/grid.html">grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libs/libs.html">libs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pm.html">pm</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">calc_delta_cic.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="init_parts_c.html">init_parts.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="init_parts_h.html">init_parts.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_particles_c.html">input_particles.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interp_force_cic_c.html">interp_force_cic.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write_particles_c.html">write_particles.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tests/tests.html">tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_evolution/time_evolution.html">time_evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../init_physics_c.html">init_physics.c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../init_physics_h.html">init_physics.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solve_c.html">solve.c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solve_h.html">solve.h</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Solve-MOND-MM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../files.html">files</a> &raquo;</li>
+        
+          <li><a href="pm.html">pm</a> &raquo;</li>
+        
+      <li>calc_delta_cic.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-c-apidoc/output/pm/calc_delta_cic_c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="calc-delta-cic-c">
+<h1>calc_delta_cic.c<a class="headerlink" href="#calc-delta-cic-c" title="Permalink to this headline">¶</a></h1>
+<p>Calculates overdensity on the grid from the particle’s positions using cloud
+in cell (CIC) smoothing.
+Comments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Details in the CIC scheme can be found in
+Hockney R. W., Eastwood J. W., 1988, Computer simulation using particles.</p></li>
+</ul>
+</div></blockquote>
+<dl class="c function">
+<dt id="c.calc_delta_cic">
+void <code class="sig-name descname">calc_delta_cic</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="../../../data_structure.html#c.params" title="params">params</a> *<em>par</em>, <em class="property">struct</em> <a class="reference internal" href="../solve_h.html#c.units" title="units">units</a> *<em>unit</em>, double *<em>pos_1</em>, double *<em>pos_2</em>, double *<em>pos_3</em>, double ***<em>delta</em><span class="sig-paren">)</span><a class="headerlink" href="#c.calc_delta_cic" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates overdensity on the grid from the particle’s positions
+using cloud in cell (CIC) smoothing..</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note for testign Sphinx.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>par</strong> – par structure.</p></li>
+<li><p><strong>unit</strong> – units structure.</p></li>
+<li><p><strong>pos_1</strong> – X component of position vector.</p></li>
+<li><p><strong>pos_2</strong> – X component of position vector.</p></li>
+<li><p><strong>pos_3</strong> – X component of position vector.</p></li>
+<li><p><strong>delta</strong> – to return overdensity.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Overdensity in the parameter delta, which should be allocated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="init_parts_c.html" class="btn btn-neutral float-right" title="init_parts.c" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pm.html" class="btn btn-neutral float-left" title="pm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

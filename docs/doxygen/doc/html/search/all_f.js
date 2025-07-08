@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['p_5fbackward_0',['p_backward',['../structgrids.html#a808fdefacf58ec8e3fb48099216a221f',1,'grids']]],
+  ['p_5fforward_1',['p_forward',['../structgrids.html#a3525a1f84b61e41a0abe1cd7b4d8c0c6',1,'grids']]],
+  ['par_2',['par',['../structparams__int.html#a9e519435c61e6005c3451d80500df8f7',1,'params_int::par()'],['../structgrids__gravity__mm.html#a319e628e4b147460e074211f7011bb29',1,'grids_gravity_mm::par()']]],
+  ['params_3',['params',['../structparams.html',1,'']]],
+  ['params_5fint_4',['params_int',['../structparams__int.html',1,'']]],
+  ['particles_5',['particles',['../structparticles.html',1,'']]],
+  ['phi_6',['phi',['../structgrids__gravity__mm.html#a5a6a07e8f938fdf7da4fee0f3be91edb',1,'grids_gravity_mm::phi()'],['../structgrids.html#a31dd25fee456e51d291673b82770bd82',1,'grids::phi()']]],
+  ['phi_5fbar_5fmm_7',['phi_bar_mm',['../structgrids.html#a7d1950872f4e4475d95aef7f9f5fed19',1,'grids']]],
+  ['pi_8',['pi',['../structunits.html#ae75ea666722f844c37b479fb79a3d432',1,'units']]],
+  ['plus_9',['PLUS',['../solve__multigrid__mm_8h.html#a0ea7ff5947c5f5430a29fdd98391eb2a',1,'solve_multigrid_mm.h']]],
+  ['pos_5f1_10',['pos_1',['../structparticles.html#ad1fb9f955e66920c8b4532ecc5dc9b06',1,'particles']]],
+  ['pos_5f2_11',['pos_2',['../structparticles.html#a4a8f5f1621d07db08f15dd05dbd79aed',1,'particles']]],
+  ['pos_5f3_12',['pos_3',['../structparticles.html#a303b315a356d9f9cd3b2252b9a134354',1,'particles']]],
+  ['pow2_13',['pow2',['../a__of__time_8c.html#a9a1a80dcaf876a3295a7653159a0e90a',1,'pow2():&#160;a_of_time.c'],['../solve_8h.html#a9a1a80dcaf876a3295a7653159a0e90a',1,'pow2():&#160;solve.h'],['../solve__spherical__mond_8c.html#a9a1a80dcaf876a3295a7653159a0e90a',1,'pow2():&#160;solve_spherical_mond.c'],['../prolonge_8c.html#a9a1a80dcaf876a3295a7653159a0e90a',1,'pow2():&#160;prolonge.c'],['../get__forces_8c.html#a9a1a80dcaf876a3295a7653159a0e90a',1,'pow2():&#160;get_forces.c']]],
+  ['pow3_14',['pow3',['../solve__spherical__mond_8c.html#ac98983fa7f157c2e68a31df7f52b6d0b',1,'pow3():&#160;solve_spherical_mond.c'],['../a__of__time_8c.html#ac98983fa7f157c2e68a31df7f52b6d0b',1,'pow3():&#160;a_of_time.c'],['../solve_8h.html#ac98983fa7f157c2e68a31df7f52b6d0b',1,'pow3():&#160;solve.h']]],
+  ['pow4_15',['pow4',['../solve__spherical__mond_8c.html#a0be66fd44a76413f646ede2cad943bcc',1,'pow4():&#160;solve_spherical_mond.c'],['../a__of__time_8c.html#a0be66fd44a76413f646ede2cad943bcc',1,'pow4():&#160;a_of_time.c'],['../solve_8h.html#a0be66fd44a76413f646ede2cad943bcc',1,'pow4():&#160;solve.h']]],
+  ['pow5_16',['pow5',['../solve__spherical__mond_8c.html#acde115ef172ac2c2331693bb55960915',1,'pow5():&#160;solve_spherical_mond.c'],['../solve_8h.html#acde115ef172ac2c2331693bb55960915',1,'pow5():&#160;solve.h']]],
+  ['pow6_17',['pow6',['../solve__spherical__mond_8c.html#a83eae7d2ebb8c94680712132e4315720',1,'pow6():&#160;solve_spherical_mond.c'],['../solve_8h.html#a83eae7d2ebb8c94680712132e4315720',1,'pow6():&#160;solve.h']]],
+  ['pow7_18',['pow7',['../solve_8h.html#a923ff7ee84c5bc0016cf22499529c5eb',1,'solve.h']]],
+  ['prolonge_19',['prolonge',['../prolonge_8c.html#a883a9b4c3c1e050f905f49121d002ade',1,'prolonge(double ***old, double ***new, int n_old, double h_old):&#160;prolonge.c'],['../prolonge_8h.html#a883a9b4c3c1e050f905f49121d002ade',1,'prolonge(double ***old, double ***new, int n_old, double h_old):&#160;prolonge.c']]],
+  ['prolonge_2ec_20',['prolonge.c',['../prolonge_8c.html',1,'']]],
+  ['prolonge_2eh_21',['prolonge.h',['../prolonge_8h.html',1,'']]],
+  ['prolonge_5ffirst_5forder_22',['prolonge_first_order',['../prolonge_8c.html#a704d4104a01967cf2e050677e8ec2f29',1,'prolonge.c']]],
+  ['prolonge_5fsecond_5forder_23',['prolonge_second_order',['../prolonge_8c.html#aabbead91b4ede924f068496efa37bf5f',1,'prolonge.c']]],
+  ['prolonge_5ftrilinear_24',['prolonge_trilinear',['../prolonge_8c.html#a942deddd567b23caaa740dff85bfeb3c',1,'prolonge.c']]]
+];
