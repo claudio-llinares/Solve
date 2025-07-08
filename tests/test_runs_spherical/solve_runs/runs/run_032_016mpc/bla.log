@@ -1,0 +1,57 @@
+==20500== Memcheck, a memory error detector
+==20500== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==20500== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==20500== Command: ../../source/bin/solve
+==20500== 
+file_in_parts = ../../../ics/hernquist_particles_64parts_20mpc.dat
+file_out      = solve
+box           = 20.0
+grid          = 64
+grid_p        = 64
+omegam        = 0.3
+omegal        = 0.7
+hsmall        = 1.0
+z_init        = 0.0
+z_end         = 0.0
+nsteps        = 300
+n_outputs     = 1
+verbose       = 0
+static_test   = 1
+symm_assb  = 0.5
+symm_range = 1.0
+symm_order = 0
+mm_a0      = 1.0e-8
+mm_M       = 0.0
+mm_KB      = 0.0
+verbose_mm_fine   = 0
+verbose_mm_coarse = 0
+nthreads      = 8
+
+Planing... forward... backward... done
+H0 = 0.100396 gyr^-1
+
+Reading particles...
+done
+Entering calc_newt_source...
+Entering solve_mm_multigrid...
+NGS = 2   verbose = 0
+Step 1    Residual = 0.000000e+00   Trunc = 0.000000e+00   Max_trunc = 0.000000e+00   Error = -nan  level = 0
+cycle_v_mm:  converged.  residual_mm = 0.000000e+00   trunc = 0.000000e+00   max_trunc = 0.000000e+00   (absolute criteria)
+solve
+Done with static test.  We stop execution here.
+==20500== 
+==20500== HEAP SUMMARY:
+==20500==     in use at exit: 49,847,760 bytes in 1,075 blocks
+==20500==   total heap usage: 38,049 allocs, 36,974 frees, 478,239,221 bytes allocated
+==20500== 
+==20500== LEAK SUMMARY:
+==20500==    definitely lost: 0 bytes in 0 blocks
+==20500==    indirectly lost: 0 bytes in 0 blocks
+==20500==      possibly lost: 0 bytes in 0 blocks
+==20500==    still reachable: 49,847,760 bytes in 1,075 blocks
+==20500==         suppressed: 0 bytes in 0 blocks
+==20500== Reachable blocks (those to which a pointer was found) are not shown.
+==20500== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==20500== 
+==20500== For counts of detected and suppressed errors, rerun with: -v
+==20500== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

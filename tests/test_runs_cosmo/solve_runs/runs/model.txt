@@ -1,0 +1,35 @@
+file_in_parts = ../../../ics/solve_ics/runs/run_0064_0064mpc_01/solve.00001.part
+file_out     = solve
+box          = 64.0
+grid         = 64
+grid_p       = 64
+omegam       = 0.267000
+omegal       = 0.733000
+hsmall       = 0.719
+z_init       = 40.0
+z_end        = 0.0
+nsteps       = 100
+n_outputs    = 1
+verbose      = 0
+
+# If 1 -> calculate potentials at z_init and stops execution:
+static_test   = 0
+
+# Gravity:
+# 0 -> Newton
+# 1 -> MOND with mass term.
+gravity    = field01
+
+
+# MOND with mass parameters:
+# [a0] = cm/sec^2
+# [M]  = h/Mpc
+mm_a0      = field02
+mm_M       = field03
+mm_KB      = 0.0
+verbose_mm        = 0
+verbose_mm_coarse = 0
+
+# FFTW parameters:
+nthreads      = 8
+

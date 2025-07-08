@@ -1,0 +1,17 @@
+file_in  = ../../../p2rho/runs/field01/p2rho
+file_out = solve
+box      = field02
+grid     = field03
+grid_p   = field03
+omegam   = 0.267000
+omegar   = 0.0
+omegal   = 0.733
+hsmall   = 0.719
+z_init   = 1000.0
+z_end    = 40.0
+nthreads = 60
+Nseed    = field04
+nsteps_nbody = 1000
+sign_delta = 1.0
+
+

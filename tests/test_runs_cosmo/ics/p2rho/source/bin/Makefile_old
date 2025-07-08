@@ -1,0 +1,71 @@
+OBJ    = p2rho.o \
+	allocator.o \
+	cuad_min.o\
+	D_lib.o \
+	releaser.o \
+	ran3.o \
+	gasdev.o \
+	p.o \
+	p2rho_lib.o \
+	sigma8_lib.o \
+	z2t_lib.o \
+	power_lib_fftw_corrected.o
+
+CC     = gcc
+
+# laptop
+CFLAGS = -DOPENMP -Wall -g -O3 -fopenmp -I/home/claudio/applications/fftw-3.3.lib.openmp/include -L/home/claudio/applications/fftw-3.3.lib.openmp/lib
+# gemini
+#CFLAGS = -Wall -g -O3 -I/Users/users/llinares/applications/fftw-3.2.1.lib.openmp/include -L/Users/users/llinares/applications/fftw-3.2.1.lib.openmp/lib
+
+LIB    = -lfftw3_omp -lfftw3 -lm
+
+all:    p2rho
+
+p2rho:	$(OBJ)
+	$(CC) $(CFLAGS) -o p2rho $(OBJ) $(LIB) -lm
+
+p2rho.o:	
+	$(CC) $(CFLAGS) -c p2rho.c
+
+p.o:	p.h \
+	p.c
+	${CC} ${CFLAGS} -c p.c
+
+z2t_lib.o:	libs/z2t_lib.h\
+		libs/z2t_lib.c
+	${CC} ${CFLAGS} -c libs/z2t_lib.c
+
+allocator.o:	libs/allocator.h \
+		libs/allocator.c
+		${CC} ${CFLAGS} -c libs/allocator.c
+
+D_lib.o:	libs/D_lib.c
+			${CC} ${CFLAGS} -c libs/D_lib.c
+
+
+releaser.o:	libs/releaser.h \
+		libs/releaser.c
+		${CC} ${CFLAGS} -c libs/releaser.c
+
+ran3.o:		libs/ran3.c
+		${CC} ${CFLAGS} -c libs/ran3.c
+
+gasdev.o:	libs/gasdev.c
+		${CC} ${CFLAGS} -c libs/gasdev.c
+
+p2rho_lib.o:	p2rho_lib.c 
+		${CC} ${CFLAGS} -c p2rho_lib.c
+
+power_lib_fftw_corrected.o:	libs/power_lib_fftw_corrected.c \
+		libs/cuad_min.c
+		${CC} ${CFLAGS} -c libs/power_lib_fftw_corrected.c
+
+sigma8_lib.o:	libs/sigma8_lib.c
+		${CC} ${CFLAGS} -c libs/sigma8_lib.c
+
+cuad_min.o:	libs/cuad_min.c 
+	${CC} ${CFLAGS} -c libs/cuad_min.c
+
+clean:
+		rm -f *.o p2rho *~

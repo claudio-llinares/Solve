@@ -1,0 +1,45 @@
+1
+../../../linger/runs/run_lcdm/linger.dat
+1
+-.801
+0.00001, 7.19
+-256.0
+1
+0
+
+
+
+
+1
+111111111
+nran.dat
+
+
+
+
+0.000719, 7.19
+
+The parameters are:
+===================
+- Type of initial power spectrum (matter transfer function):
+     1 for T(k) from linger.dat
+     2 for T(k) from approx. analytical fit
+     3 for T(k)=1 (scale-free)
+- linger.dat filename
+- Long-wave spectral index n (scale-invariant is n=1)
+- Desired normalization at a=1:
+   Qrms-ps/micro-K (if > 0) or -sigma_8 (if < 0)
+- kmin and kmax (1/Mpc) for output power spectrum (in power.dat)
+- dx (initial particle spacing in Mpc, not Mpc/h) or -boxlength in Mpc/h
+    i.e. dx in Mpc if > 0, or -boxlength in Mpc/h if < 0
+- 1 if these initial conditions will not be refined
+- 0 for final output or 1 for further refinement
+- <RETURN> to skip output grid size
+- <RETURN> to skip output grid offset
+- <RETURN> to skip final grid size
+- <RETURN> to skip final grid offset
+- irand (1 or 2) from the following list:
+     irand=1 to generate new noise and save to file
+     irand=2 to read noise from existing file
+- Random number seed (9-digit integer, ignored if irand=2)
+- Filename of white noise file (or <RETURN> if irand=0)

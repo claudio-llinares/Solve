@@ -1,0 +1,39 @@
+file_in_parts = ../../../ics/hernquist_particles_64parts_20mpc.dat
+file_out      = solve
+box           = 20.0
+grid          = 64
+grid_p        = 64
+omegam        = 0.3
+omegal        = 0.7
+hsmall        = 1.0
+z_init        = 0.0
+z_end         = 0.0
+nsteps        = 300
+n_outputs     = 1
+verbose       = 0
+static_test   = 1
+gravity    = 1
+mm_a0      = 1.0e-8
+mm_M       = 0.0
+mm_KB      = 0.0
+verbose_mm        = 0
+verbose_mm_coarse = 0
+nthreads      = 8
+
+Planing... forward... backward... done
+Warning!  init_physics: changing cte_poisson!
+H0 = 0.100396 gyr^-1
+a0 = 3.11018 Mpc / Gyr^2
+
+Reading particles...
+done
+Entering solve_multigrid_mm...
+NGS = 2   verbose = 0
+Step 1    Res = 1.049532e+00   Trunc = 1.549788e-01   Max_trunc = 2.120105e-02   Error = 1.057567e-02  level = 0
+Step 2    Res = 4.420836e-02   Trunc = 1.215333e-01   Max_trunc = 1.902010e-02   Error = 4.454681e-04  level = 0
+Step 3    Res = 7.586819e-03   Trunc = 1.212037e-01   Max_trunc = 1.874932e-02   Error = 7.644902e-05  level = 0
+Step 4    Res = 1.976546e-03   Trunc = 1.211855e-01   Max_trunc = 1.875472e-02   Error = 1.991679e-05  level = 0
+Step 5    Res = 5.451555e-04   Trunc = 1.211891e-01   Max_trunc = 1.875538e-02   Error = 5.493291e-06  level = 0
+cycle_v_mm:  converged.  res = 5.451555e-04   trunc = 1.211891e-01   max_trunc = 1.875538e-02   id = 3
+solve
+Done with static test.  We stop execution here.

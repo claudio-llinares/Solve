@@ -1,0 +1,37 @@
+#file_in_parts = ../../../ics/hernquist_particles_64parts_9mpc.dat
+file_in_parts = ../../../ics/hernquist_particles_64parts_20mpc.dat
+file_out      = solve
+#box           = 9.938619408830823
+box           = 20.0
+grid          = 64
+grid_p        = 64
+omegam        = 0.3
+omegal        = 0.7
+hsmall        = 1.0
+z_init        = 0.0
+z_end         = 0.0
+nsteps        = 300
+n_outputs     = 1
+verbose       = 0
+
+# If 1 -> calculate potentials at z_init and stops execution:
+static_test   = 1
+
+# Gravity:
+# 0 -> Newton
+# 1 -> MOND with mass term.
+gravity    = 1
+
+# MOND with mass parameters:
+# [a0] = cm/sec^2
+# [M]  = h/Mpc
+mm_a0      = 1.0e-8
+mm_M       = 0.0
+mm_KB      = 0.0
+verbose_mm        = 0
+verbose_mm_coarse = 0
+
+# FFTW parameters:
+nthreads      = 8
+
+

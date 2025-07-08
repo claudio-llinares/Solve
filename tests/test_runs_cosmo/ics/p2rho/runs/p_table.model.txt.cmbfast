@@ -1,0 +1,22 @@
+../../../cmbfast_transfer/runs/run_lcdm_50_100/transf_1000.dat
+1
+1.0
+
+
+
+1.0
+
+
+2.11118765498122840E-009
+
+The parameters are:
+===================
+- Input file
+- col = column to use for the transfer function.
+       0 = k
+       1 = cdm
+       2 = baryons
+       3 = radiation
+       4 = neutrinos
+       5 = massive neutrinos
+

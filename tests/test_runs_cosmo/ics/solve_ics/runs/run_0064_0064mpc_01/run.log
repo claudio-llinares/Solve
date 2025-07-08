@@ -1,0 +1,62 @@
+read_params...
+file_in  = ../../../p2rho/runs_5_realizations_for_test_05/run_0064_0064mpc_01/p2rho
+file_out = solve
+box      = 64.0
+grid     = 64
+grid_p   = 64
+omegam   = 0.267000
+omegar   = 0.0
+omegal   = 0.733
+hsmall   = 0.719
+z_init   = 1000.0
+z_end    = 40.0
+nthreads = 60
+Nseed    = -1
+nsteps_nbody = 1000
+sign_delta = 1.0
+
+init_grid...
+Allocating...
+1/8
+2/8
+3/8
+4/8
+5/8
+6/8
+7/8
+8/8
+Calling init_fftw...
+Planing... forward... backward... done
+init_physics...
+unit->cte_poisson = 0.002087
+cte_poisson = 0.00208687 
+H0 = 0.0721848 gyr^-1
+rho_crit = 1.43508e+11 msun mpc^-3 = 2.776e+11 msun Mpc^-3 h^2
+rho_mean = 3.83167e+10 msun mpc^-3 = 7.41192e+10 msun Mpc^-3 h^2
+G = 4.33407e-15 mpc^3 msun^-1 sec^-2
+clight = 300.98 mpc/gyr
+init_parts...
+Calculating particle mass from mean density.
+Particle's mass (mine) = 1.03087e+11 Msun = 7.41192e+10 Msun/h
+Particle's mass (grafic2) = 1.03087e+11 Msun = 7.41192e+10 Msun/h
+Reading density...
+Mean delta = 6.55289e-11
+Calling zeldovich...
+Entering calc_newt_source...
+Doing FFT...
+Calling fftw_execute... 
+done
+Antitransforming FFT...
+Calling fftw_execute... 
+done
+zeldovich: D      = 0.0321768
+zeldovich: norm_D = 217.936
+move     = 1.541871e+01
+move_vel = -1.494922e+02
+Writing fields...
+norm_D       = 217.936
+move_phi     = 1.31925
+move_phi_dot = -1.13747e-05
+D_q          = 0.0328203
+delta_main: sigma = 3.200194e+00  max = 1.378314e+01  a = 9.990010e-04  z = 1.000000e+03
+Finish with everything ...

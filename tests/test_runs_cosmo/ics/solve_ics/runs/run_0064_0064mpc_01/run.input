@@ -1,0 +1,17 @@
+file_in  = ../../../p2rho/runs_5_realizations_for_test_05/run_0064_0064mpc_01/p2rho
+file_out = solve
+box      = 64.0
+grid     = 64
+grid_p   = 64
+omegam   = 0.267000
+omegar   = 0.0
+omegal   = 0.733
+hsmall   = 0.719
+z_init   = 1000.0
+z_end    = 40.0
+nthreads = 60
+Nseed    = -1
+nsteps_nbody = 1000
+sign_delta = 1.0
+
+

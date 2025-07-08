@@ -1,0 +1,47 @@
+par.prefix       = p2rho
+par.box          = 64.000000
+par.grid         = 64
+par.omega_0      = 0.267000
+par.Nseed        = -1
+par.hsmall       = 0.719000
+par.model        = 5
+par.show_spectr  = 1
+par.test         = 1
+par.mean_delta   = 1
+par.show_sigma_8 = 1
+par.nthreads = 8
+z = 1000.000000
+a = 0.000999
+t = 416753933854275.062500 sec/h = 0.013453 Gyr
+fftw threads initialized.
+Generating a realization of P...
+Generating realization of the power spectrum
+Reading power spectrum parameters for model 5 from file p_table.input
+par_p.table = ../../../grafic/runs/run_128_512mpc/power.dat
+Reading transfer function from file ../../../grafic/runs/run_128_512mpc/power.dat
+model_table: k_min  = 0.000001
+model_table: k_max  = 10.000005
+model_table: k[n-1] = 10.000005
+model_table: n      = 202
+Finish reading.
+Finish with realization of the power spectrum
+D_1000(a=1) = 758.577
+Writing sigma_8 stuff...
+sigma_8(z=1000) = -nan
+sigma_8(z=0)    = -nan
+Calculating overdensity...
+Transfering to fftw format...
+Antitransforming FFT...
+Normalizing...
+Writing...
+Delta mean = 2.49973e-16
+Delta sigma = 3.20019
+Delta max = 13.7831
+Delta min = -16.8653
+min max mean sigma = -16.8653  13.7831  2.49973e-16  3.20019
+Delta         = 1.390821
+kn = pi/Delta = 2.258805
+Calling fftw_execute... 
+done
+NOT doing Jing's correction...
+Finish with everything.

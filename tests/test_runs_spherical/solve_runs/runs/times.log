@@ -1,0 +1,148 @@
+run_032_016mpc Reading particles...
+run_032_016mpc 31 0.312500 0.156250 9.843750
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc Reading particles...
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc Entering solve_fifth_multigrid...
+run_032_016mpc static_test = 1
+run_032_016mpc solve
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc Reading particles...
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc Reading particles...
+run_032_016mpc solve
+run_032_016mpc 19.843750
+run_032_016mpc 19.843750
+run_032_016mpc 19.843750 17.049875
+run_032_016mpc 19.843750 17.049875
+run_032_016mpc solve
+run_032_016mpc
+run_032_016mpc
+run_032_016mpc
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc 6.387365e-14 0.031297 4
+run_032_016mpc cycle_v_fifth: converged. residual_fifth = 6.502757e-02 trunc = 6.710516e-01 max_trunc = 6.787800e-02
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc Step 50 Residual = 1.240890e+00 Trunc = 1.159594e-01 Max_trunc = 3.516397e-02 Error = 5.017252e-02 level = 0
+run_032_016mpc Step 50 Residual = 1.240890e+00 Trunc = 1.159594e-01 Max_trunc = 3.516397e-02 Error = 5.017252e-02 level = 0
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc
+run_032_016mpc verbose_multi = 0 7.101894e-02 0
+run_032_016mpc cycle_v_mm: converged. residual_mm = 0.000000e+00 trunc = 0.000000e+00 max_trunc = 0.000000e+00 (absolute criteria)
+run_032_016mpc Entering solve_mm_multigrid...
+run_032_016mpc verbose_multi = 0 2.160786e+00 0
+run_032_016mpc verbose_multi = 0 2.160786e+00 0
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve
+run_032_016mpc solve

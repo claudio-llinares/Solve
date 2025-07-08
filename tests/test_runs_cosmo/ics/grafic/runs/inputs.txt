@@ -1,0 +1,5 @@
+run_064_064mpc run
+run_128_512mpc run
+run_128_128mpc run
+run_256_256mpc run
+run_512_512mpc run

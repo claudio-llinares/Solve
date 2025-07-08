@@ -1,0 +1,38 @@
+field01
+field02
+.733
+0
+71.9
+2.726
+.24
+0
+field03
+field04
+100
+0
+1
+
+The parameters are:
+===================
+- Omega_b, Omega_c, Omega_v, Omega_nu (e.g. .05 .30 0.65 0)
+- H0, Tcmb, Y_He, N_nu(massive) (e.g. 65 2.726 0.24 0)
+- kmin (1/Mpc), kmax (1/Mpc), nk, zend (e.g. 1.e-4 50 100 0)
+- Initial conditions cases:
+     1 for isentropic (adiabatic) fluctuations,
+     2 for cdm entropy/isocurvature fluctuations, or
+     3 for baryon entropy/isocurvature fluctuations, or
+     4 for seed/isocurvature fluctuations
+
+.045
+.222
+.733
+0
+71.9
+2.726
+.24
+0
+1.0e-5
+10
+121
+0
+1

@@ -1,0 +1,10 @@
+ Enter Omega_b, Omega_c, Omega_v, Omega_nu (e.g. .05 .30 0.65 0)
+ Enter H0, Tcmb, Y_He, N_nu(massive) (e.g. 65 2.726 0.24 0)
+ Computer matter transfer functions only, lmax=100
+ Enter kmin (1/Mpc), kmax (1/Mpc), nk, zend (e.g. 1.e-4 50 100 0)
+ Initial conditions cases:
+     1 for isentropic (adiabatic) fluctuations,
+     2 for cdm entropy/isocurvature fluctuations, or
+     3 for baryon entropy/isocurvature fluctuations, or
+     4 for seed/isocurvature fluctuations
+ Enter 1, 2, 3, or 4 now

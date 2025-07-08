@@ -1,0 +1,105 @@
+../../../p2rho/runs/field01/p2rho
+a
+solve
+../field02
+field03
+field04
+field05
+-1
+field06
+0.0
+field07
+field08
+field09
+0.0
+field10
+field11
+field12
+field13
+200
+101
+0.0
+10
+9
+1.2efield14
+1
+0
+0
+0
+0
+0
+1
+0
+field15
+0
+1
+2
+1
+field16
+field17
+1
+
+- z_init=498.0 for Bob files.
+
+The parameters are:
+===================
+- Input file for density.
+- Input file for particles.
+- Output file.
+- Input file with Bob's spectra
+- field02 = box size (Mpc/h)
+- field03 = number of cells per dimension.
+- field04 = number of particles per dimenssion.
+- mass
+- field05 = omega0
+- omegar
+- field06 = omegal
+- field07 = hsmall
+- z inic
+- z end
+- field08 = z_zeldovich = redshift for the zeldovich approximation.
+            It will go from z_init to z_zeldovich and then start the leap-frog.
+- field09 = z stop
+- field10 = nsteps
+- field11 = gravity
+    - 0 -> Newton
+    - 1 -> MOND.  Laplacian as divergence of spherical forces.
+    - 2 -> MOND.  Laplacian as divergence of real monian forces.
+    - 3 -> MOND.  Laplacian as derivatives of Newtonian potetial.
+    - 4 -> biMOND
+- number of outputs
+- histo_nbins = number of bins for histogram of forces
+- histo_min = min values for histogram of forces.(m sec-2)
+- histo_max = max values for histogram of forces.(m sec-2)
+- number of threads (not important if not openmp)
+- a0 (m sec^-2)
+- Plan for FFTW
+    - 0 -> FFTW_ESTIMATE
+    - 1 -> FFTW_MEASURE
+    - 2 -> FFTW_PATIENT
+    - 3 -> FTTW_EXHAUSTIVE
+- output grid
+- output grid extended
+- output colored information
+- output particles
+- output integrals
+- glass
+- glass move_vel
+- field12 = Interpolation to use
+- Type of ic for particle
+- jing correction
+- power_a0 = power of a in the argument of the mu function.
+- zero_mean = 1 -> uses 0 mean phantom density for bimond; 0 -> don't
+- field13 = flag for analytic solution of the growth equation
+ 	- 0 -> use leap-grof for delta.
+        - 1 -> use analytic D.
+	- 2 -> use Bob power spectra
+	- 3 -> use Bob spectra to get intial density distribution and
+	       switches to 1.
+- field15 = Nseed = Initial seed for the Bob realizations.
+                      // To be used with numerical recipies, so it must be <0.
+- only_ics = flag to generate initial conditions.  
+             - 1 -> stop execution after output of ics.
+
+
+

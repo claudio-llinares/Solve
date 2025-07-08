@@ -1,0 +1,3 @@
+run_lcdm_small run
+run_lcdm_large run
+run_lcdm_bar run

@@ -1,0 +1,29 @@
+p2rho
+64.0
+64
+0.267000
+-1
+0.719
+5
+1
+1
+1
+1
+8
+
+The parameters are:
+===================
+- Output prefix
+- Box size (Mpc/h)
+- grid (1D)
+- Omega_0 (omega matter total)
+- Nseed
+- hsmall
+- Model for the power spectrum
+    0 -> Formulas from Klypin.
+    1 -> Power law.
+    2 -> Table with the transfter function given by cmbfast.
+	5 -> Table with power spectrum given by grafic.
+- Flag for showing the input spectrum
+- Flag for showing the output spectrum
+- Show sigma8
